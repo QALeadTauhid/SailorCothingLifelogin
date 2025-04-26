@@ -6,14 +6,14 @@ from selenium.common.exceptions import TimeoutException
 class LoginPage:
     def __init__(self, driver):
         self.driver = driver
-        # Updated XPath selectors
-        self.email_field = (By.XPATH, "//input[@class='form-control' and @type='email']")  # Updated for email field
-        self.password_field = (By.XPATH, "//input[@placeholder='Password']")  # Updated for password field
-        self.login_button = (By.XPATH, "//button[normalize-space()='Login Now']")  # Updated for login button
-        self.logout_link = (By.XPATH, "//a[normalize-space()='Logout']")  # Updated for logout link
-        self.error_message = (By.XPATH, "//div[contains(text(),'User not found')]")  # Updated for invalid credentials error
-        self.empty_fields_error = (By.XPATH, "//div[contains(text(),'Unauthorized')]")  # Updated for empty fields error
-        self.page_title_after_login = "Sailor | Sailing Life"  # Title after successful login
+        # XPath selectors
+        self.email_field = (By.XPATH, "//input[@class='form-control' and @type='email']")
+        self.password_field = (By.XPATH, "//input[@placeholder='Password']")
+        self.login_button = (By.XPATH, "//button[normalize-space()='Login Now']")
+        self.logout_link = (By.XPATH, "//a[normalize-space()='Logout']")
+        self.error_message = (By.XPATH, "//div[contains(text(),'User not found')]")
+        self.empty_fields_error = (By.XPATH, "//div[contains(text(),'Unauthorized')]")
+        self.page_title_after_login = "Sailor | Sailing Life"
 
     def enter_credentials(self, email, password):
         """Clear and enter email and password into the respective fields."""
