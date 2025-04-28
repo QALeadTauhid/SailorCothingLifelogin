@@ -11,7 +11,7 @@ def step_impl(context):
 
 @when('I enter valid email and password')
 def step_impl(context):
-    context.login_page.enter_credentials("testaccoffice3@gmail.com", "DkvhZ4u@p#dZgac")
+    context.login_page.enter_credentials("test-----@gmail.com", "trtyry")
 
 @when('I enter invalid email and password')
 def step_impl(context):
